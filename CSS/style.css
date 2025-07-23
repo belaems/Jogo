@@ -29,7 +29,7 @@
  animation: jump 500ms ease-out; 
 }
 
-.cloud {
+.clouds {
   position: absolute;
   width: 550px;
   animation: clouds-animation 17s infinite linear;
@@ -64,7 +64,7 @@
   }
 }
 
-@keyframes clouds-animations{
+@keyframes clouds-animation{
   from{
     right: -550px;
   }
