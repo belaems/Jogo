@@ -5,8 +5,11 @@ let scored = false;
 const scoreElement = document.getElementById("score");
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+const restartBtn = document.getElementById("restartBtn");
 
 const jump = () => {
+  if (gameOver) return;
+
   mario.classList.add("jump");
   setTimeout(() => {
     mario.classList.remove("jump");
@@ -31,6 +34,8 @@ const loop = setInterval(() => {
     mario.style.width = "75px";
     mario.style.marginLeft = "50px";
 
+    restartBtn.style.display = "block";
+
     clearInterval(loop);
   }
 
@@ -49,3 +54,7 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
+
+restartBtn.addEventListener("click", () => {
+  location.reload();
+});
