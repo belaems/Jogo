@@ -10,7 +10,7 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#87CEEB, #E0F6FF);
+  background: linear-gradient(#87ceeb, #e0f6ff);
 }
 .pipe {
   position: absolute;
@@ -22,11 +22,10 @@
   width: 150px;
   position: absolute;
   bottom: 0;
-  
 }
 
 .jump {
- animation: jump 500ms ease-out; 
+  animation: jump 500ms ease-out;
 }
 
 .clouds {
@@ -34,6 +33,17 @@
   width: 550px;
   animation: clouds-animation 17s infinite linear;
 }
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: white;
+  font-family: sans-serif;
+  z-index: 999;
+}
+
 
 @keyframes pipe-animation {
   from {
@@ -49,14 +59,14 @@
   0% {
     bottom: 0;
   }
-  40%{
+  40% {
     bottom: 180px;
   }
 
   50% {
     bottom: 180px;
   }
-  60%{
+  60% {
     bottom: 180px;
   }
   100% {
@@ -64,9 +74,11 @@
   }
 }
 
-@keyframes clouds-animation{
-  from{
+@keyframes clouds-animation {
+  from {
     right: -550px;
   }
-  to{right: 100%;}
+  to {
+    right: 100%;
+  }
 }
