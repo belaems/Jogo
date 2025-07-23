@@ -1,6 +1,6 @@
 let score = 0;
 let gameOver = false;
-let scored = false; // nova flag para controlar pontuação por obstáculo
+let scored = false; 
 
 const scoreElement = document.getElementById("score");
 const mario = document.querySelector(".mario");
